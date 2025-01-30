@@ -30,26 +30,26 @@ import glob
 UserName = os.getlogin()
 
 # Construct the path for the working directory
-set_wd = os.path.normpath(f"C:/Users/{UserName}/US Army/A365-PBI - Data/")
+set_wd = os.path.normpath(f"C:/Users/{UserName}/US Army/FakeLink - Data/")
 
 # Check if the directory exists; if not, switch to the OneDrive path
 if not os.path.exists(set_wd):
-    set_wd = os.path.normpath(f"C:/Users/{UserName}/OneDrive - US Army/A365-PBI - Data/")
+    set_wd = os.path.normpath(f"C:/Users/{UserName}/ThreeDrive - US Army/FakeLink - Data/")
 
 # Change the current working directory to set_wd
 os.chdir(set_wd)
 
 # Define the OneDrive path (assuming this is the user's OneDrive directory)
-one_drive_path = os.path.normpath(f"C:/Users/{UserName}/OneDrive - US Army")
+one_drive_path = os.path.normpath(f"C:/Users/{UserName}/ThreeDrive - US Army")
 
 
 # This is for Debugging to check if out path Exsists
 """
 # Verify if the OneDrive path exists
 if not os.path.exists(one_drive_path):
-    raise FileNotFoundError(f"OneDrive path '{one_drive_path}' does not exist.")
+    raise FileNotFoundError(f"TheeDrive path '{Three_drive_path}' does not exist.")
 else:
-    print(f"OneDrive path '{one_drive_path}' exists and is ready to run scripts.")
+    print(f"OneDrive path '{Three_drive_path}' exists and is ready to run scripts.")
    """
 
 # -------------------------------------------------------------------- Setting up the Working Directory ------------------------------------------------------
@@ -90,7 +90,7 @@ def find_newest_r_script():
 
 # Construct and verify file paths dynamically
 for filename in rscript_filenames:
-    rscript_path = os.path.normpath(os.path.join(one_drive_path, "A365-PBIv2 - Documents", "R", filename))
+    rscript_path = os.path.normpath(os.path.join(Three_drive_path, "FakeLink - Documents", "R", filename))
    
     # This is checking if the Rpath exists.
     if os.path.exists(rscript_path):
@@ -197,6 +197,6 @@ except Exception as e:
 """  
 
 # -------------------------------------------------------------------- Modifications  -------------------------------------------------------------------    
-# When everyou do a modification, please add the item below to track the changes.
+# When ever you do a modification, please add the item below to track the changes.
 #InitialsDate
 #CCM01/01/2025
