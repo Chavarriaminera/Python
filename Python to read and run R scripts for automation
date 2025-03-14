@@ -30,17 +30,17 @@ import glob
 UserName = os.getlogin()
 
 # Construct the path for the working directory
-set_wd = os.path.normpath(f"C:/Users/{UserName}/US Army/FakeLink - Data/")
+set_wd = os.path.normpath(f"C:/Users/{UserName}/File/FakeLink - Data/")
 
 # Check if the directory exists; if not, switch to the OneDrive path
 if not os.path.exists(set_wd):
-    set_wd = os.path.normpath(f"C:/Users/{UserName}/ThreeDrive - US Army/FakeLink - Data/")
+    set_wd = os.path.normpath(f"C:/Users/{UserName}/ThreeDrive - File/FakeLink - Data/")
 
 # Change the current working directory to set_wd
 os.chdir(set_wd)
 
 # Define the OneDrive path (assuming this is the user's OneDrive directory)
-one_drive_path = os.path.normpath(f"C:/Users/{UserName}/ThreeDrive - US Army")
+one_drive_path = os.path.normpath(f"C:/Users/{UserName}/ThreeDrive - File")
 
 
 # This is for Debugging to check if out path Exsists
