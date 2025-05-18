@@ -69,11 +69,11 @@ else:
 # List of R script filenames
 rscript_filenames =[ "CSSP3.R"
                     #,"IAVM_Proccessing.R"
-                    #,"PAC_AVD_Session_Proc.R"
+                    #,"PAC_Men_Session_Proc.R"
                     #,"AVD_Cost.R"
-                    #,"Daily and Monthy Active Users Archive.R"
-                    #,"AUDS.R"
-                    #,"AVD_Users.R"
+                    #,"Daily and Monthye.R"
+                    #,"AUDIOS.R"
+                    #,"AVDs.R"
                     # Add more script filenames here
                      ]
 
