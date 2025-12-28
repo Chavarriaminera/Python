@@ -8,6 +8,11 @@ data analysis, NLP, automation, and exploratory data analysis.
 Exploratory analysis of Bitcoin-related tweets using VADER compound
 sentiment scores. Includes log-scaled visualizations to surface rare
 extreme sentiment events.
+### Why This Matters
+Sentiment data is highly imbalanced toward neutral expressions.
+Using a log-scaled visualization allows rare but extreme emotional
+responses to remain visible, which is critical for downstream
+modeling and event-driven analysis.
 
 📂 See: `bitcoin_sentiment_analysis/`
 
