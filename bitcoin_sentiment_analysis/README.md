@@ -17,16 +17,23 @@ signals without distortion.
 - Text preprocessing of Bitcoin-related tweets
 - Sentiment scoring using VADER compound sentiment scores
 - Exploratory data analysis (EDA) of sentiment distributions
-- Log-scaled histogram visualization to preserve visibility of rare,
-  high-magnitude sentiment values
+- Log-scaled visualization to preserve visibility of rare, high-magnitude events
+- Hashtag frequency analysis overall and by sentiment bucket (negative / neutral / positive)
 
-## Example Output
+## Visuals
 
+### Sentiment Distribution (VADER)
 ![Sentiment Distribution](figures/sentiment_distribution_vader.png)
 
 *Distribution of VADER compound sentiment scores for Bitcoin-related
 tweets. A logarithmic y-axis is used to prevent the dominant neutral
 mass from obscuring low-frequency but extreme sentiment events.*
+
+### Top Hashtags (Overall + by Sentiment Bucket)
+**Note:** Counts reflect **hashtag occurrences** (a single tweet can contain multiple hashtags).
+Percentages are computed **within each panel** (overall or sentiment bucket).
+
+![Top Hashtags Overall + Sentiment Buckets](figures/top_hashtags_overall_and_by_sentiment_vader.png)
 
 ## Interpretation
 Most tweets cluster near neutral sentiment, creating a dominant
@@ -36,6 +43,11 @@ reveals heavier positive sentiment tails relative to negative ones,
 suggesting asymmetry in how sentiment is expressed around Bitcoin
 in social media discourse.
 
+Hashtag usage is highly skewed (a few tags dominate), so a log-scaled
+x-axis helps preserve readability across both common and less frequent
+hashtags. Comparing panels provides a quick view of how discussion topics
+shift across negative, neutral, and positive sentiment buckets.
+
 ## Project Structure
 The analysis is organized as a stepwise pipeline:
 
@@ -43,12 +55,13 @@ The analysis is organized as a stepwise pipeline:
 - `1-Step 1.py` — Sentiment scoring using VADER
 - `2-Step 2.py` — Core exploratory data analysis
 - `2-Step 2 EDA.py` — Extended EDA and visualization experiments
-- `Step2.2EDAHistogram.py` — Iterative refinement of sentiment
-  distribution histograms
+- `Step2.2EDAHistogram.py` — Iterative refinement of sentiment distribution histograms
+- `eda_top_hashtags_overall_and_by_sentiment_vader.py` — Top hashtags overall + by sentiment bucket (log-scale, Bitcoin-themed)
 
 Scripts are ordered to reflect a typical exploratory-to-analytical
 workflow used in applied NLP projects.
 
-## Status
-Work in progress. Planned next steps include top counts of hastags for both negative and positve sentiment.
+## Status / Next Steps
+Next, I plan to calculate the smoothed log-odds ratio to compare word usage between Class A and Class B (e.g., negative vs. positive sentiment). 
+This highlights which tokens are overrepresented in one sentiment group relative to the other, surfacing class-specific language that simple frequency counts often miss.
 
