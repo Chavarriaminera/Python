@@ -5,7 +5,7 @@ data science, natural language processing (NLP), exploratory data
 analysis (EDA), and automation. Each project emphasizes clear analytical
 workflows, thoughtful visualization, and real-world data challenges.
 
-## Featured Project
+## Featured Projects
 
 ### Bitcoin Sentiment Analysis
 
@@ -24,6 +24,27 @@ rare but extreme emotional responses through log-scaled visualization.
 📂 **Project directory:**  
 `bitcoin_sentiment_analysis/`
 
+---
+
+### AESTHETIQ Assistant — Databricks RAG Ingestion Pipeline
+
+A production-style document ingestion pipeline built in Databricks that
+converts raw documents (e.g., PDFs) into RAG-ready structured data.
+The workflow extracts text, chunks content, and writes normalized Delta
+tables with incremental processing, hashing, and failure logging — designed
+to support downstream embeddings + vector search for LLM retrieval.
+
+**Key concepts demonstrated:**
+- Data engineering pipeline design (ETL/ELT)
+- Databricks + PySpark workflows
+- Delta Lake table modeling (documents / chunks / failures)
+- Incremental ingestion + deduplication patterns (hashing)
+- Observability and error logging for reliability
+- RAG preprocessing (chunking for embeddings + retrieval)
+
+📂 **Project directory:**  
+`aesthetiq_databricks_rag_ingestion_pipeline/`
+
 ## Why This Matters
 
 Sentiment data is often dominated by neutral expressions, which can
@@ -31,6 +52,11 @@ mask meaningful but infrequent emotional extremes. This project shows
 how careful exploratory analysis and visualization choices can uncover
 signals that are relevant for downstream modeling, risk analysis, and
 event-driven insights.
+
+Separately, RAG systems are only as reliable as their ingestion layer.
+A consistent chunking strategy, incremental processing, and failure
+logging are essential for building trustworthy corpora for embeddings,
+vector indexing, and retrieval quality.
 
 ## Other Work
 
