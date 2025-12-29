@@ -15,8 +15,6 @@ It extracts text, chunks content, and writes normalized **Delta tables** with in
 ## Architecture
 
 ### Visual (GitHub Mermaid)
-> If you ever see a Mermaid error, it usually means the code fence wasn’t closed.  
-> This block starts with ```mermaid and ends with ``` on its own line.
 
 ```mermaid
 flowchart TD
