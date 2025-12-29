@@ -5,6 +5,11 @@ data science, natural language processing (NLP), exploratory data
 analysis (EDA), and automation. Each project emphasizes clear analytical
 workflows, thoughtful visualization, and real-world data challenges.
 
+## Portfolio Highlights
+- **Data Science / NLP:** sentiment analysis, imbalanced distributions, interpretable language signals
+- **Data Engineering / RAG:** Databricks + Delta Lake ingestion pipeline (PDF → chunks → Delta tables) built for embeddings + vector search
+- **Focus:** reproducible workflows, clarity, and production-minded reliability patterns
+
 ## Featured Projects
 
 ### Bitcoin Sentiment Analysis
@@ -22,7 +27,7 @@ rare but extreme emotional responses through log-scaled visualization.
 - Analytical interpretation of social media data
 
 📂 **Project directory:**  
-`bitcoin_sentiment_analysis/`
+[`bitcoin_sentiment_analysis/`](bitcoin_sentiment_analysis/)
 
 ---
 
@@ -37,13 +42,15 @@ to support downstream embeddings + vector search for LLM retrieval.
 **Key concepts demonstrated:**
 - Data engineering pipeline design (ETL/ELT)
 - Databricks + PySpark workflows
-- Delta Lake table modeling (documents / chunks / failures)
+- Delta Lake table modeling (`documents` / `chunks` / `failures`)
 - Incremental ingestion + deduplication patterns (hashing)
 - Observability and error logging for reliability
 - RAG preprocessing (chunking for embeddings + retrieval)
 
 📂 **Project directory:**  
-`aesthetiq_databricks_rag_ingestion_pipeline/`
+[`aesthetiq_databricks_rag_ingestion_pipeline/`](aesthetiq_databricks_rag_ingestion_pipeline/)
+
+> Optional local demo (no Databricks): add `local_dry_run.py` in the project folder and run it locally.
 
 ## Why This Matters
 
