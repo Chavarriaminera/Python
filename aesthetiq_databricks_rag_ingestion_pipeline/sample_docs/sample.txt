@@ -1,0 +1,6 @@
+AESTHETIQ Assistant ingestion demo text.
+
+This sample document exists so anyone can run the local dry-run script
+and see how chunking + hashing works without Databricks.
+
+Replace this with any long text to test how chunk boundaries behave.
