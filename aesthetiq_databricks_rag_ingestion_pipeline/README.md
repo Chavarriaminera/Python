@@ -17,12 +17,11 @@ It extracts text, chunks content, and writes normalized **Delta tables** with in
 ### Visual (GitHub Mermaid)
 ```mermaid
 flowchart TD
-  A[Source Docs (PDFs)] --> B[Text Extraction]
-  B --> C[Chunking (size + overlap)]
-  C --> D[Delta: documents]
-  C --> E[Delta: chunks]
-  C --> F[Delta: failures]
-  E --> G[(Next) Embeddings]
-  G --> H[(Next) Vector Index]
-  H --> I[(Next) Retrieval Evaluation]
-
+  A[Source Docs - PDFs] --> B[Text Extraction]
+  B --> C[Chunking - size and overlap]
+  C --> D[Delta - documents]
+  C --> E[Delta - chunks]
+  C --> F[Delta - failures]
+  E --> G[Next - Embeddings]
+  G --> H[Next - Vector Index]
+  H --> I[Next - Retrieval Evaluation]
